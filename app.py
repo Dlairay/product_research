@@ -1,9 +1,11 @@
-from productscan import get_product, encode_image
+# from productscan import get_product, encode_image
+from productscan_gemini import get_product, encode_image
+
 from youtube import youtube_data_collection, load_data_to_pandas
 from tavily import webscrape
 
 
-image = 'img/img_2.jpeg' 
+image = 'img/mehmeh.jpeg' 
 base64_image = encode_image(image)
 product = get_product(base64_image)
 print(product)

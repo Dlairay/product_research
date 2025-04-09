@@ -46,6 +46,6 @@ def webscrape(product):
 
 
 
-product = "iphone 13"
+product = "Secretlab Titan Evo Lite gaming chair"
 webscrape_result = webscrape(product)
 print(webscrape_result)
