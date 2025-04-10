@@ -30,7 +30,20 @@ def get_product(base64_image):
         "role": "user",
         "content": [
           {
-            "type": "text", "text": """Perform the following steps--- Step 1: State the product shown. 
+            "type": "text", "text": """State the product shown,do your best to identify the exact product brand and model.
+            poitive example:
+            -Apple iPhone 13 Pro Max
+            -Mercedes Benz G-Class
+            -secret lab gaming chair
+            -razor deathadder v3 pro
+            negative example: 
+            -phone
+            -car
+            -gaming chair
+            -computer mouse
+            },
+
+
             return only a string of what the product is"""
             },
           {
@@ -55,3 +68,10 @@ def product_scan(image):
   
   return product
 
+
+# === Main block for testing ===
+if __name__ == "__main__":
+    image = 'img/img_1.jpeg'
+    print("Scanning image for product...")
+    result = product_scan(image)
+    print("Identified product:", result)
