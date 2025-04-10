@@ -46,6 +46,6 @@ def webscrape(product):
 
 
 
-product = "iphone 13"
-webscrape_result = webscrape(product)
-print(webscrape_result)
+# product = "iphone 13"
+# webscrape_result = webscrape(product)
+# print(webscrape_result)

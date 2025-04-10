@@ -1,87 +1,57 @@
 import os
-import json
-import pandas as pd
 from googleapiclient.discovery import build
-import pickle
 from dotenv import load_dotenv
-
-def create_data_directory(directory_path="youtube_data"):
-    try:
-        os.makedirs(directory_path, exist_ok=True)
-    except Exception as e:
-        raise Exception(f"Failed to create directory '{directory_path}': {e}")
-
-
-
-def save_data_to_directory(data, directory_path="youtube_data"):
-    create_data_directory(directory_path)
-    
-    # Save comments data with video URLs instead of IDs
-    comments_data_with_urls = [
-        {**comment, 'video_url': data['video_pages'][data['video_ids'].index(comment['video_id'])]} for comment in data['comment_data']
-    ]
-
-    # Save using Pickle
-    with open(f"{directory_path}/comments_data.pkl", "wb") as f:
-        pickle.dump(comments_data_with_urls, f)
-
-
-def load_data_to_pandas(directory_path="youtube_data"):
-    try:
-        # Load using Pickle
-        with open(f"{directory_path}/comments_data.pkl", "rb") as f:
-            comments_data = pickle.load(f)
-        comments_df = pd.DataFrame(comments_data)
-
-        return comments_df
-    except Exception as e:
-        raise Exception(f"Failed to load data from '{directory_path}': {e}")
+from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
 
 
 def youtube_data_collection(search_terms, max_result=5):
+    """returns a dictionary of youtube data in the form of
+    youtube_data = {"videoId": {"transcript": "transcript", 
+                                "comments": ["comment1", "comment2"], 
+                                "video_title": "title",
+                                "comment_count": comment_count,}}
+    """
     load_dotenv()
     API_KEY = os.getenv("GOOGLE_API_KEY")
 
     youtube = build('youtube', 'v3', developerKey=API_KEY)
+    youtube_data = {}
 
-    vid_id = []
-    vid_page = []
-    vid_title = []
-    num_comments = []
-    comment_data = []
-
-    request = youtube.search().list(
+    search_response = youtube.search().list(
         q=search_terms,
         maxResults=max_result,
         part="id",
         type="video",
-        order="viewCount",  # Get top 5 most viewed videos for reliability
+        order="viewCount",
         relevanceLanguage='en'
-    )
-    search_response = request.execute()
+    ).execute()
 
-    for i in range(max_result):
-        videoId = search_response['items'][i]['id']['videoId']
-        vid_id.append(videoId)
-        page = "https://www.youtube.com/watch?v=" + videoId
-        vid_page.append(page)
+    items = search_response.get('items', [])
+    if not items:
+        print("No videos found for the given search term.")
+        return youtube_data
 
-        # Fetch video details and comments in the same loop
-        request = youtube.videos().list(
-            part="snippet, statistics",
-            id=videoId
-        )
-        video_response = request.execute()
+    for item in items:
+        videoId = item['id']['videoId']
+        comment_data = []
 
-        title = video_response['items'][0]['snippet']['title']
-        vid_title.append(title)
+        try:
+            video_response = youtube.videos().list(
+                part="snippet,statistics",
+                id=videoId
+            ).execute()
+            title = video_response['items'][0]['snippet']['title']
+        except (KeyError, IndexError) as e:
+            print(f"Failed to fetch video details for {videoId}: {e}")
+            continue
+
         try:
             comment_count = int(video_response['items'][0]['statistics']['commentCount'])
-            num_comments.append(comment_count)
-        except:
-            num_comments.append(0)
+        except (KeyError, ValueError) as e:
+            print(f"Comment count missing or invalid for {videoId}: {e}")
+            comment_count = 0
 
-        # Retrieve comments if available
         try:
             request = youtube.commentThreads().list(
                 part="snippet,replies",
@@ -90,27 +60,43 @@ def youtube_data_collection(search_terms, max_result=5):
                 order="relevance"
             )
             comment_response = request.execute()
-
             for item in comment_response.get('items', []):
-                comment = item['snippet']['topLevelComment']['snippet']['textDisplay']
-                comment_data.append({
-                    'video_id': videoId,
-                    'video_title': title,
-                    'comment': comment
-                })
+                try:
+                    comment = item['snippet']['topLevelComment']['snippet']['textDisplay']
+                    comment_data.append(comment)
+                except KeyError as e:
+                    print(f"Skipping a malformed comment entry: {e}")
         except Exception as e:
-            pass
+            print(f"Failed to fetch comments for video {videoId}: {e}")
 
-    data = {
-        "video_ids": vid_id,
-        "video_pages": vid_page,
-        "video_titles": vid_title,
-        "num_comments": num_comments,
-        "comment_data": comment_data
-    }
+        transcript = get_transcript_from_youtube(videoId)
+        video_data = {
+            "transcript": transcript,
+            "comments": comment_data,
+            "video_title": title,
+            "comment_count": comment_count
+        }
+        youtube_data[videoId] = video_data
 
-    save_data_to_directory(data)
-
-    return data
+    return youtube_data
 
 
+def get_transcript_from_youtube(video_id):
+    try:
+
+        transcript_chunks = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
+        return " ".join([chunk['text'] for chunk in transcript_chunks])
+    except (NoTranscriptFound, TranscriptsDisabled):
+
+        return "no english transcript could be found"
+
+
+# # Main execution
+# search_terms = "lego batmobile 2025"
+# youtube_data = youtube_data_collection(search_terms)
+# print(youtube_data)
+
+# # Save data to pickle file
+# import pickle
+# with open(f'{search_terms}_youtube_data.pkl', 'wb') as f:
+#     pickle.dump(youtube_data, f)

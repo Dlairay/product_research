@@ -48,3 +48,10 @@ def get_product(base64_image):
   product = response.choices[0].message.content
   return product
 
+
+def product_scan(image):
+  base64_img = encode_image(image)
+  product = get_product(base64_img)
+  
+  return product
+
