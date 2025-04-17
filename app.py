@@ -1,58 +1,57 @@
 from productscan import product_scan
-from youtube import youtube_data_collection
-from tavily import webscrape
-from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from youtube_tool import youtube_data_retrieval
+from tavily_tool import webscrape
 import pickle
-import os
-from processing import filter_comments_batch
+import pandas as pd
 
-
-product = product_scan('img/img_3.jpeg')
-pickle_file = f'pickle/{product}_youtube_data.pkl'
-
-if os.path.exists(pickle_file):
-    print(f"Loading existing YouTube data for: {product}")
-    with open(pickle_file, 'rb') as f:
-        youtube_data = pickle.load(f)
-else:
-    print(f"No data found. Collecting YouTube reviews for: {product}")
-    youtube_data = youtube_data_collection(product + " review", max_result=5)
-    with open(pickle_file, 'wb') as f:
-        pickle.dump(youtube_data, f)
-
-# from pprint import pprint
-# pprint (youtube_data)
-
-
-
-def count_comments(youtube_data):
-    count = 0
-    for key, value in youtube_data.items():
-        for _ in value["comments"]:
-            count += 1
-    print(f"Total comments: {count}")
-    return count
-
-    
-
-
-def remove_junk_comments(youtube_data):
-    count_comments(youtube_data)
-
-    for key, value in youtube_data.items():
-        all_comments = value["comments"]
-        relevance_flags = filter_comments_batch(all_comments)
-
-        # Keep only relevant comments
-        filtered_comments = [comment for comment, is_relevant in zip(all_comments, relevance_flags) if is_relevant]
-        youtube_data[key]["comments"] = filtered_comments
-
-    count_comments(youtube_data)
-
-remove_junk_comments(youtube_data)
+# from google.adk.agents import Agent
+# from google.adk.models.lite_llm import LiteLlm
+# from vectordb import youtube_to_chromadb
+# from query import summarize_feedback
+# from tavily_tool import search_competitor_names
 
 
 
 
+# product = product_scan("img/img_3.jpeg")
+product = "Secretlab Titan Evo 2022 Gaming Chair"
 
+youtube_data = youtube_data_retrieval(product)
+# ##add youtube data to central pandas dataframe
+# Convert data to a DataFrame
+rows = []
+for video_id, video_data in youtube_data.items():
+    for comment in video_data.get("comments", []):
+        rows.append({
+            "content": comment,
+            "source": "YouTube",
+            "url": f"https://www.youtube.com/watch?v={video_id}"
+        })
+
+youtube_df = pd.DataFrame(rows)
+
+# # Show the first few rows
+# print(df.head())
+
+tavily_data = webscrape(product)
+
+
+with open("pickle/Secretlab Titan Evo 2022 Gaming Chair_web_data.pkl", "rb") as f:
+    web_data = pickle.load(f)
+
+# Convert to DataFrame
+rows = []
+for title, info in web_data.items():
+    rows.append({
+        "content": info.get("content", ""),
+        "source": "Web",
+        "url": info.get("url", "")
+    })
+
+web_df = pd.DataFrame(rows)
+print(web_df.head())
+
+# combined_df = pd.concat([youtube_df, web_df], ignore_index=True)
+
+
+# combined_df.to_csv("combined_data.csv", index=False)
