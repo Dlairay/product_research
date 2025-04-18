@@ -1,0 +1,11 @@
+.env
+
+# Mac system files
+.DS_Store
+
+# Python build junk
+__pycache__/
+*.pyc
+
+# Langchain vector db & cache
+others/persist/
