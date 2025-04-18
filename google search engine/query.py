@@ -1,6 +1,10 @@
 from pdfsearch import get_manual_pdf
 # Before loading the PDF
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 def try_decode_fake_pdf_as_html(pdf_path):
     try:
@@ -73,7 +77,8 @@ def extract_matching_chunks(splits, prompt):
 print("Splits created:", len(splits))
 #create embeddings and build the vectorbase 
 from langchain_openai import OpenAIEmbeddings
-embedding = OpenAIEmbeddings()
+embedding = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
+
 
 import shutil
 
@@ -111,7 +116,11 @@ vectordb = Chroma(
 # Initialize the language model (ensure you have access to the "gpt-4o" model)
 from langchain_core.messages import SystemMessage
 
-llm = ChatOpenAI(model_name="gpt-4o", temperature=0)
+llm = ChatOpenAI(
+    model_name="gpt-4o",
+    temperature=0,
+    openai_api_key=os.getenv("OPENAI_API_KEY")
+)
 
 
 qa_chain = RetrievalQA.from_chain_type(
@@ -122,7 +131,7 @@ qa_chain = RetrievalQA.from_chain_type(
 
 # Example prompt: Adjust this query as needed.
 # After getting result from LLM
-prompt = "What are the specs for this chair?"
+prompt = "What is the aftercare guide for this chair?"
 
 def enforce_english(prompt):
     return f"Please answer only in English. {prompt.strip()}"
