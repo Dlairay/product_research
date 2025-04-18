@@ -2,8 +2,17 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import fitz  # PyMuPDF
+from dotenv import load_dotenv
+import os
 
-TAVILY_KEY = "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"
+load_dotenv()  # this will read from your .env file
+
+# Then fetch the key like this:
+TAVILY_KEY = os.getenv("TAVILY_API_KEY")
+headers = {
+    "Authorization": f"Bearer {TAVILY_KEY}",
+    "Content-Type": "application/json"
+}
 
 
 def search_user_manual(product_name):
