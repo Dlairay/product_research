@@ -34,7 +34,7 @@ def clean_html_noise(text: str) -> str:
 # -------- TAVILY SEARCH --------
 def search_tavily(product):
     payload = {
-        "query": product + " review",
+        "query": f"{product} review",
         "search_depth": "basic",
         "max_results": 5
     }
@@ -67,10 +67,7 @@ async def extract_single_threaded(title, url):
             }
         except Exception as e:
             print(f"[ERROR] {url}: {e}")
-            return title, {
-                "url": url,
-                "content": ""
-            }
+            return title, {"url": url, "content": ""}
 
     return await asyncio.to_thread(blocking_request)
 
@@ -96,31 +93,32 @@ def webscrape(product):
     search_results = search_tavily(product)
     extracted_data = asyncio.run(extract_all(search_results))
 
-    # --- CLEAN AND CHUNK BEFORE PANDAS ---
+    # --- CLEAN, CHUNK, AND PREPARE ROWS ---
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     chunked_rows = []
 
-    for info in extracted_data.values():
+    for title, info in extracted_data.items():
         cleaned = clean_html_noise(info["content"])
         if cleaned:
             chunks = splitter.split_text(cleaned)
             for chunk in chunks:
                 chunked_rows.append({
                     "content": chunk,
-                    "source": "web",
+                    "source": title,
+                    "type": "website",
                     "url": info["url"]
                 })
 
-    # Save to pickle
+    # Convert to DataFrame and save
+    df = pd.DataFrame(chunked_rows, columns=["content", "source", "type", "url"])
     with open(filename, "wb") as f:
-        pickle.dump(chunked_rows, f)
+        pickle.dump(df, f)
 
-    print(f"[INFO] Saved to: {filename}")
-    return chunked_rows
+    print(f"[INFO] Pickled DataFrame to: {filename}")
+    return df
 
 # -------- ENTRY POINT --------
 if __name__ == "__main__":
     product = "iPhone 13"
-    rows = webscrape(product)
-    df = pd.DataFrame(rows)
+    df = webscrape(product)
     print(df.head())

@@ -5,10 +5,7 @@ import os
 import base64
 
 load_dotenv()
-
-
-
-
+OPEN_AI_API_KEY = os.getenv("OPENAI_API_KEY") # Load OpenAI API key from environment variable
 def encode_image(image):
   with open(image, "rb") as image_file:
     return base64.b64encode(image_file.read()).decode('utf-8')
@@ -18,29 +15,30 @@ image = 'img/img_1.jpeg'
 base64_image = encode_image(image)
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) 
+client = OpenAI(api_key=OPEN_AI_API_KEY) # Initialize OpenAI client
 
 
 
 def get_product(base64_image):
   response = client.chat.completions.create(
+                                            
     model="gpt-4o-mini",
     messages=[
       {
         "role": "user",
         "content": [
           {
-            "type": "text", "text": """State the product shown,do your best to identify the exact product brand and model.
-            poitive example:
-            -Apple iPhone 13 Pro Max
-            -Mercedes Benz G-Class
-            -secret lab gaming chair
-            -razor deathadder v3 pro
+            "type": "text", "text": """State the product shown, do your best to identify the exact product brand and model.
+            positive example:
+            - Apple iPhone 13 Pro Max
+            - Mercedes Benz G-Class
+            - secret lab gaming chair
+            - razor deathadder v3 pro
             negative example: 
-            -phone
-            -car
-            -gaming chair
-            -computer mouse
+            - phone
+            - car
+            - gaming chair
+            - computer mouse
 
             return only a string of what the product is"""
             },

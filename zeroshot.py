@@ -1,9 +1,8 @@
 from transformers import pipeline
 import pandas as pd
 from youtube_tool import load_YouTube_df
+from tavily_tool import webscrape 
 from openai import OpenAI
-import json
-import random
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -140,12 +139,14 @@ if __name__ == "__main__":
 
     search_terms = "Secretlab Titan Evo 2022 Gaming Chair"
     youtube_df = load_YouTube_df(search_terms)
-
+    tavily_df = webscrape(search_terms)
+    df = pd.concat([youtube_df, tavily_df], ignore_index=True)
     # Run the zero-shot classification and label generation
-    df, labels_list = run_all(df=youtube_df)
+    df, labels_list = run_all(df=df)
     
     # Save the labeled DataFrame to a new pickle file
-    df.to_pickle("youtube_data_labeled.pkl")
+    df.to_pickle("pickle/combined_data_labeled.pkl")
+    print("columns,rows",df.columns, df.shape)
     
     # Print the generated labels
     print("Generated Labels:", labels_list)
