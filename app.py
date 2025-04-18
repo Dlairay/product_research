@@ -24,7 +24,6 @@ else:
 # from pprint import pprint
 # pprint (youtube_data)
 
-# test
 
 def count_comments(youtube_data):
     count = 0
