@@ -127,9 +127,9 @@ def run_all(df, n_samples=50, model="gpt-3.5-turbo", seed=42):
     )
 
     # assign each row its label
-    df["label"] = df["content"].apply(
-        lambda txt: assign_label(txt, labels_list) if is_feedback(txt) else None
-    )
+    df["label"] = df.apply(
+        lambda row: assign_label(row["content"], labels_list) if row["is_feedback"] else None,
+        axis=1)
 
     return df, labels_list
 
