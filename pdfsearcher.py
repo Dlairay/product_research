@@ -25,8 +25,15 @@ def retrieve_and_process_manual(product_name: str) -> Optional[str]:
     }
     payload = {
         "query": f"{product_name} user manual pdf",
-        "search_depth": "basic"
+        "search_depth": "advanced",
+        "max_results": 10,
+        "include_domains": [
+            "manualslib.com",
+            "manua.ls",
+            "manualzz.com",
+        ]
     }
+
     response = requests.post("https://api.tavily.com/search", headers=headers, json=payload)
     data = response.json()
     results = data.get("results", [])
