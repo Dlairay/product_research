@@ -10,6 +10,39 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 
+sentiment_analyzer = pipeline("sentiment-analysis")
+
+def analyze_sentiment_score(text):
+    """
+    Returns a sentiment score between 0 and 1:
+    - 1 means very positive
+    - 0 means very negative
+
+    Args:
+        text (str): Input text
+
+    Returns:
+        float or None: Sentiment score between 0 and 1
+    """
+    if not isinstance(text, str) or not text.strip():
+        return None
+    try:
+        # Truncate long text for transformer limit
+        result = sentiment_analyzer(text[:512])
+        label = result[0]["label"]
+        score = result[0]["score"]
+
+        # Map label and score to 0-1 sentiment scale
+        if label.upper() == "POSITIVE":
+            return score
+        elif label.upper() == "NEGATIVE":
+            return 1 - score
+        else:
+            return 0.5  # default to neutral if uncertain
+    except Exception as e:
+        print(f"[ERROR] Sentiment analysis failed: {e}")
+        return None
+
 
 zs_classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
@@ -119,17 +152,30 @@ def assign_label(text, candidate_labels):
 
 
 def run_all(df, n_samples=50, model="gpt-3.5-turbo", seed=42):
+    #first remove noise like spam/adverstising/troll
     df["is_feedback"] = df["content"].apply(is_feedback)
 
-    feedback_df = df[df["is_feedback"]]
-    labels_list = generate_labels_from_feedback(
-        feedback_df, n_samples=n_samples, model=model, seed=seed
+    # Step 1. Sentiment score for feedback
+    df["sentiment_score"] = df.apply(
+        lambda row: analyze_sentiment_score(row["content"]) if row["is_feedback"] else None,
+        axis=1
     )
 
-    # assign each row its label
+    # Step 2. Filter negative feedback for label generation
+    negative_feedback_df = df[
+        (df["is_feedback"]) & (df["sentiment_score"] < 0.5)
+    ].copy()
+
+    # Step 3. Generate labels from negative feedback only
+    labels_list = generate_labels_from_feedback(
+        negative_feedback_df, n_samples=n_samples, model=model, seed=seed
+    )
+
+    # Step 4. Assign labels to all feedback rows (even positive ones)
     df["label"] = df.apply(
         lambda row: assign_label(row["content"], labels_list) if row["is_feedback"] else None,
-        axis=1)
+        axis=1
+    )
 
     return df, labels_list
 
@@ -137,15 +183,15 @@ def run_all(df, n_samples=50, model="gpt-3.5-turbo", seed=42):
 if __name__ == "__main__":
     # Load the YouTube DataFrame
 
-    search_terms = "Secretlab Titan Evo 2022 Gaming Chair"
-    youtube_df = load_YouTube_df(search_terms)
-    tavily_df = webscrape(search_terms)
+    product = "Secretlab Titan Evo 2022 Gaming Chair"
+    youtube_df = load_YouTube_df(product)
+    tavily_df = webscrape(product)
     df = pd.concat([youtube_df, tavily_df], ignore_index=True)
     # Run the zero-shot classification and label generation
     df, labels_list = run_all(df=df)
     
     # Save the labeled DataFrame to a new pickle file
-    df.to_pickle("pickle/combined_data_labeled.pkl")
+    df.to_pickle(f"pickle/combined_{product}_data_labeled.pkl")
     print("columns,rows",df.columns, df.shape)
     
     # Print the generated labels
