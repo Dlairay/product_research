@@ -1,57 +1,37 @@
 from productscan import product_scan
-from youtube_tool import youtube_data_retrieval
-from tavily_tool import webscrape
-import pickle
+from competitor_finder import get_competitor_list
+from pipeline import run_pipeline
+from retriever import run_suggestions
 import pandas as pd
+import concurrent.futures
 
-# from google.adk.agents import Agent
-# from google.adk.models.lite_llm import LiteLlm
-# from vectordb import youtube_to_chromadb
-# from query import summarize_feedback
-# from tavily_tool import search_competitor_names
+# === Step 1: Detect product from image ===
+image = 'img/img_3.jpeg'
+product = product_scan(image)
+print("✅ Product detected:", product)
 
+# === Step 2: Get competitors ===
+competitor_list = get_competitor_list(product)
+print("✅ Competitors found:", competitor_list)
 
+# === Step 3: Run pipeline for all products (parallel)
+list_to_research = competitor_list + [product]
+all_labelled_dfs = []
 
+print(f"🚀 Running pipeline for {len(list_to_research)} products in parallel...")
 
-# product = product_scan("img/img_3.jpeg")
-product = "Secretlab Titan Evo 2022 Gaming Chair"
+for item in list_to_research:
+    print(f"🔄 Running pipeline for: {item}")
+    labelled_df = run_pipeline(item)
+    if labelled_df is not None:
+        all_labelled_dfs.append(labelled_df)
+        print(f"✅ Finished: {item}\n")
 
-youtube_data = youtube_data_retrieval(product)
-# ##add youtube data to central pandas dataframe
-# Convert data to a DataFrame
-rows = []
-for video_id, video_data in youtube_data.items():
-    for comment in video_data.get("comments", []):
-        rows.append({
-            "content": comment,
-            "source": "YouTube",
-            "url": f"https://www.youtube.com/watch?v={video_id}"
-        })
+# === Step 4: Combine all labelled feedback
+if all_labelled_dfs:
+    overview_df = pd.concat(all_labelled_dfs, ignore_index=True)
+    overview_df.to_pickle("pickle/all_labelled_feedback.pkl")
+    print("✅ Combined feedback across products saved.")
 
-youtube_df = pd.DataFrame(rows)
-
-# # Show the first few rows
-# print(df.head())
-
-tavily_data = webscrape(product)
-
-
-with open("pickle/Secretlab Titan Evo 2022 Gaming Chair_web_data.pkl", "rb") as f:
-    web_data = pickle.load(f)
-
-# Convert to DataFrame
-rows = []
-for title, info in web_data.items():
-    rows.append({
-        "content": info.get("content", ""),
-        "source": "Web",
-        "url": info.get("url", "")
-    })
-
-web_df = pd.DataFrame(rows)
-print(web_df.head())
-
-# combined_df = pd.concat([youtube_df, web_df], ignore_index=True)
-
-
-# combined_df.to_csv("combined_data.csv", index=False)
+# === Step 5: Run suggestions (after all products are processed)
+run_suggestions(product)

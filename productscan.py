@@ -6,21 +6,15 @@ import base64
 
 load_dotenv()
 OPEN_AI_API_KEY = os.getenv("OPENAI_API_KEY") # Load OpenAI API key from environment variable
+open_ai_client = OpenAI(api_key=OPEN_AI_API_KEY) # Initialize OpenAI client
+
 def encode_image(image):
   with open(image, "rb") as image_file:
     return base64.b64encode(image_file.read()).decode('utf-8')
-  
-
-image = 'img/img_1.jpeg' 
-base64_image = encode_image(image)
-
-
-client = OpenAI(api_key=OPEN_AI_API_KEY) # Initialize OpenAI client
-
 
 
 def get_product(base64_image):
-  response = client.chat.completions.create(
+  response = open_ai_client.chat.completions.create(
                                             
     model="gpt-4o-mini",
     messages=[
@@ -67,6 +61,10 @@ def product_scan(image):
 
 # === Main block for testing ===
 if __name__ == "__main__":
+    load_dotenv()
+    OPEN_AI_API_KEY = os.getenv("OPENAI_API_KEY") # Load OpenAI API key from environment variable
+    open_ai_client = OpenAI(api_key=OPEN_AI_API_KEY) # Initialize OpenAI client
+
     image = 'img/img_1.jpeg'
     print("Scanning image for product...")
     result = product_scan(image)

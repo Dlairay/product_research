@@ -6,15 +6,16 @@ import re
 from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import pandas as pd
+from utils import text_cleaner
 
 load_dotenv()
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
-
 SEARCH_URL = "https://api.tavily.com/search"
 EXTRACT_URL = "https://api.tavily.com/extract"
 
 # -------- CLEANING FUNCTION --------
 def clean_html_noise(text: str) -> str:
+    text = text_cleaner(text)
     if not text:
         return ""
 
@@ -119,6 +120,7 @@ def webscrape(product):
 
 # -------- ENTRY POINT --------
 if __name__ == "__main__":
+
     product = "iPhone 13"
     df = webscrape(product)
     print(df.head())
