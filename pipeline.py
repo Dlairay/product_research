@@ -22,9 +22,9 @@ def run_pipeline(product_name: str):
         combined_df = pd.read_pickle(combined_path)
     else:
         print(f"[{product_name}] 🌐 Fetching YouTube and web data...")
-        youtube_df = load_YouTube_df(product_name, max_result=5, transcript_chunk_size=100, cache_dir='pickle')
+        # youtube_df = load_YouTube_df(product_name, max_result=5, transcript_chunk_size=100, cache_dir='pickle')
         tavily_df = webscrape(product_name)
-        combined_df = pd.concat([youtube_df, tavily_df], ignore_index=True)
+        combined_df = pd.concat([tavily_df], ignore_index=True)
         combined_df.to_pickle(combined_path)
         print(f"[{product_name}] ✅ Combined data saved to {combined_path}")
 

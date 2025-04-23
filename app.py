@@ -7,15 +7,18 @@ import concurrent.futures
 
 # === Step 1: Detect product from image ===
 image = 'img/img_3.jpeg'
-product = product_scan(image)
+# product = product_scan(image)
+product = "Secretlab Titan Evo Lite"
 print("✅ Product detected:", product)
 
 # === Step 2: Get competitors ===
-competitor_list = get_competitor_list(product)
-print("✅ Competitors found:", competitor_list)
+# competitor_list = get_competitor_list(product)
+# print("✅ Competitors found:", competitor_list)
 
 # === Step 3: Run pipeline for all products (parallel)
-list_to_research = competitor_list + [product]
+# list_to_research = competitor_list + [product]
+list_to_research = ["competitor_list"] + [product]
+
 all_labelled_dfs = []
 
 print(f"🚀 Running pipeline for {len(list_to_research)} products in parallel...")

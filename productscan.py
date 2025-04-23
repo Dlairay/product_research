@@ -65,7 +65,7 @@ if __name__ == "__main__":
     OPEN_AI_API_KEY = os.getenv("OPENAI_API_KEY") # Load OpenAI API key from environment variable
     open_ai_client = OpenAI(api_key=OPEN_AI_API_KEY) # Initialize OpenAI client
 
-    image = 'img/img_1.jpeg'
+    image = 'img/img_3.jpeg'
     print("Scanning image for product...")
     result = product_scan(image)
     print("Identified product:", result)
