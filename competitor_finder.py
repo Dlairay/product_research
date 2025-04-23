@@ -20,23 +20,23 @@ class CompetitorList(BaseModel):
 
 function_def = {
     "name": "extract_competitors",
-    "description": "Extract a list of 5 competing product names from a paragraph.",
+    "description": "Extract a list of {n} competing product names from a paragraph.",
     "parameters": {
         "type": "object",
         "properties": {
             "competitors": {
                 "type": "array",
                 "items": {"type": "string"},
-                "description": "List of 5 product names"
+                "description": "List of {n} product names"
             }
         },
         "required": ["competitors"]
     }
 }
 
-def get_competitor_list(product: str) -> List[str]:
+def get_competitor_list(product: str, n: int) -> List[str]:
     payload = {
-        "query": f"what are 5 competitors for {product}",
+        "query": f"what are {n} competitors for {product}",
         "search_depth": "basic",
         "include_answer": "basic",
         "max_results": 10
@@ -77,5 +77,6 @@ Extract only 5 product names that are competitors. Return them strictly in a lis
 
 if __name__ == "__main__":
     product = "Secretlab Titan Evo 2022"
-    competitors = get_competitor_list(product)
+    n = 5
+    competitors = get_competitor_list(product, n=n)
     print("Competitor List:", competitors)

@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 from urllib.parse import urlparse
 import re
-
+import os 
 def extract_website_name(url):
     try:
         netloc = urlparse(url).netloc  # e.g. 'www.techradar.com'
@@ -41,7 +41,39 @@ def traceback(label=str,df = pd.DataFrame, n=5):
     print(f"{df.shape[0]} rows found, showing first {n} rows: \n {filtered_df.head(n)}")
     return filtered_df
 
+def load_and_combine_existing_dataframes(product_list, pickle_dir="pickle"):
+    """
+    Checks for existing labeled data pickle files for a list of products,
+    loads them as pandas DataFrames, and concatenates them into a single DataFrame.
+    Returns the combined DataFrame (which will be empty if no files are found or loaded).
+    """
+    all_dfs = []
 
+    if not os.path.exists(pickle_dir):
+        print(f"[INFO] Pickle directory '{pickle_dir}' does not exist.")
+        return pd.DataFrame()
+
+    for product in product_list:
+        file_name = f"combined_{product}_data_labeled.pkl"
+        file_path = os.path.join(pickle_dir, file_name)
+
+        if os.path.exists(file_path):
+            try:
+                df = pd.read_pickle(file_path)
+                print(f"[INFO] Loaded existing data for '{product}' from '{file_path}'.")
+                all_dfs.append(df)
+            except Exception as e:
+                print(f"[ERROR] Could not load '{file_path}': {e}")
+        else:
+            print(f"[INFO] No existing data found for '{product}' at '{file_path}'.")
+
+    if not all_dfs:
+        print("[INFO] No DataFrames loaded to combine.")
+        return pd.DataFrame()
+    else:
+        combined_df = pd.concat(all_dfs, ignore_index=True)
+        print(f"[INFO] Concatenated {len(all_dfs)} DataFrames into one with {len(combined_df)} rows.")
+        return combined_df
 # Load pickle file
 # with open("pickle/combined_data_labeled.pkl", "rb") as f:
 #     data = pickle.load(f)

@@ -51,7 +51,11 @@ def youtube_data_to_dataframe_rows(search_terms, max_result=5, transcript_chunk_
     ).execute()
 
     for item in search_response.get('items', []):
+        if item.get('id', {}).get('kind') != 'youtube#video':
+            continue  # skip if not a video
+
         video_id = item['id']['videoId']
+
         video_url = f"https://www.youtube.com/watch?v={video_id}"
 
         # Transcript chunks

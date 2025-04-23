@@ -128,7 +128,7 @@ def assign_label(text, candidate_labels):
         return None
 
 
-def run_all(df, n_samples=50, model="gpt-3.5-turbo", seed=42):
+def run_all(df, product: str, n_samples=50, model="gpt-3.5-turbo", seed=42):
     """Pipeline: filter → sentiment → label generation → label assignment"""
     df["is_feedback"] = df["content"].apply(is_feedback)
     df["sentiment_score"] = df.apply(
@@ -143,7 +143,11 @@ def run_all(df, n_samples=50, model="gpt-3.5-turbo", seed=42):
         lambda row: assign_label(row["content"], labels_list) if row["is_feedback"] else None,
         axis=1
     )
-    return df, labels_list
+    df.to_pickle(f"pickle/combined_{product}_data_labeled.pkl") ###super important cache
+    return df
+
+
+
 
 
 # === Main Execution ===
@@ -155,7 +159,3 @@ if __name__ == "__main__":
     df = pd.concat([youtube_df, tavily_df], ignore_index=True)
 
     df, labels_list = run_all(df=df)
-
-    df.to_pickle(f"pickle/combined_{product}_data_labeled.pkl")
-    print("✅ Data saved. Columns:", df.columns, "| Rows:", df.shape[0])
-    print("🧠 Generated Labels:", labels_list)
