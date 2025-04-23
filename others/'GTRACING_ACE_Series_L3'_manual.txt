@@ -1,0 +1,865 @@
+Manualslib.com - The Ultimate Manuals Library
+Manuals / Brands / Zoetis Manuals / Measuring Instruments / AlphaTrak 3 / User manual / PDF
+ZOETIS ALPHATRAK 3 USER MANUAL
+Quick Links
+Setting up the Alphatrak 3 Meter
+Set Unit
+Set Bluetooth
+Alphatrak 3 Control Solution
+Error Codes
+ 
+Table of Contents
+Table of Contents
+AlphaTrak 3 Meter and How It Works
+AlphaTrak 3 Blood Glucose Monitoring System Components
+Starter Kit
+Important Information About AlphaTrak Blood Glucose Monitoring
+System
+Important Health Related Information
+Setting Up the AlphaTrak 3 Meter
+Set Sound Volume
+Set Unit
+Set Date
+Set Time
+Set Bluetooth
+Set Glucose Warning
+Obtaining a Blood Sample
+How to Lance
+AlphaTrak 3 Blood Glucose Testing
+Perform a Blood Glucose Test
+Important Test Strip Information
+Understanding Blood Glucose Results
+Low and High Blood Glucose Results
+GLU-H Result Display (HIGH)
+AlphaTrak 3 Control Solution
+Control Solution Information
+Out of Range Control Solution Results
+Performing an AlphaTrak 3 Control Solution Test
+Using Meter Memory
+Setting Reminder Alarms
+Maintaining the AlphaTrak 3 Meter
+Replacing the Battery
+Cleaning the AlphaTrak 3 Meter
+Error Codes
+Trouble Shooting
+Specifications
+Meter
+Test Strips
+Control Solution
+Regulatory
+Definition of Symbols
+References
+ 
+ 
+ 
+AlphaTrak 3 User Guide 
+Draft 0.5   11-25-2021 
+1 
+ 
+ 
+ 
+Table of Contents 
+ 
+AlphaTrak 3 Meter and How It Works ................................................................................................................................................................................................... 3 
+AlphaTrak 3 Blood Glucose Monitoring System Components .............................................................................................................................................................. 4 
+Important Information About AlphaTrak Blood Glucose Monitoring System ...................................................................................................................................... 5 
+Important Health Related Information ............................................................................................................................................................................................. 5 
+Setting Up the AlphaTrak 3 Meter ......................................................................................................................................................................................................... 9 
+Set Bluetooth ................................................................................................................................................................................................................................... 10 
+Set Glucose Warning ....................................................................................................................................................................................................................... 11 
+Obtaining a Blood Sample ................................................................................................................................................................................................................... 13 
+How to Lance ................................................................................................................................................................................................................................... 13 
+AlphaTrak 3 Blood Glucose Testing ..................................................................................................................................................................................................... 14 
+Perform a Blood Glucose Test ......................................................................................................................................................................................................... 14 
+Important Test Strip Information .................................................................................................................................................................................................... 14 
+2 
+ 
+Understanding Blood Glucose Results ................................................................................................................................................................................................ 18 
+Low and High Blood Glucose Results1,2 ........................................................................................................................................................................................... 18 
+GLU-H Result Display (HIGH) ........................................................................................................................................................................................................... 20 
+AlphaTrak 3 Control Solution .............................................................................................................................................................................................................. 20 
+Control Solution Information .......................................................................................................................................................................................................... 20 
+Out of Range Control Solution Results ............................................................................................................................................................................................ 21 
+Performing an AlphaTrak 3 Control Solution Test ........................................................................................................................................................................... 21 
+Using Meter Memory .......................................................................................................................................................................................................................... 25 
+Maintaining the AlphaTrak 3 Meter .................................................................................................................................................................................................... 27 
+Replacing the Battery ...................................................................................................................................................................................................................... 27 
+Cleaning the AlphaTrak 3 Meter ...................................................................................................................................................................................................... 28 
+Trouble Shooting ................................................................................................................................................................................................................................. 32 
+Specifications ....................................................................................................................................................................................................................................... 33 
+Test Strips ........................................................................................................................................................................................................................................ 34 
+Control Solution ............................................................................................................................................................................................................................... 34 
+Regulatory ........................................................................................................................................................................................................................................... 35 
+Definition of Symbols .......................................................................................................................................................................................................................... 38 
+ 
+ 
+3 
+ 
+AlphaTrak 3 Meter and How It Works 
+ 
+ 
+(Placeholder) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+ 
+AlphaTrak 3 Blood Glucose Monitoring System Components  
+ 
+Starter Kit 
+ 
+  
+AlphaTrak 3 Meter (SKU placeholder) 
+  
+Two Batteries (3V, CR2032) (SKU placeholder) 
+  
+Blood Glucose Test Strips (SKU placeholder) 
+  
+Control Solution (SKU placeholder) 
+  
+Lancing Device (SKU placeholder) 
+  
+Lancets (SKU placeholder) 
+  
+Carry Case (SKU placeholder) 
+ 
+  
+ 
+ 
+ 
+ 
+                                                                                                                                                                                     (Placeholder) 
+ 
+ 
+ 
+5 
+ 
+Important Information About AlphaTrak Blood Glucose Monitoring System 
+Important Health Related Information 
+ 
+The AlphaTrak 3 meter is intended for use outside the body only (in vitro diagnostic use) The AlphaTrak 3 Blood Glucose Monitoring System is intended for use 
+in monitoring glucose samples taken from dogs or cats Glucose values are affected by stress, meals, exercise, health and medication intake Severe 
+dehydration and excessive water loss may cause false low results Caution: The AlphaTrak 3 test strips are not intended for human blood glucose testing If the AlphaTrak 3 meter is used in any way other than described in this manual, the meter may not operate as intended, may produce inaccurate or no results, 
+and may pose a safety hazard Use the AlphaTrak 3 meter for: 
+  Testing blood glucose in dogs and cats 
+  Testing with fresh whole blood samples 
+  Testing with fresh whole capillary samples 
+  Testing with fresh whole venous samples 
+  Testing with whole blood collected in a syringe or tube with EDTA or heparin anticoagulant if testing within 10 minutes of obtaining sample 
+  Testing with whole blood collected in a syringe or tube with no anticoagulant, if testing is performed immediately after obtaining sample 
+Do not use the AlphaTrak 3 meter for: 
+  Testing of arterial blood 
+  Testing with serum 
+  Testing with plasma 
+  Diagnosis of diabetes 
+ 
+IMPORTANT: Use only AlphaTrak 3 test strips and AlphaTrak 3 control solution with this meter Using previous versions of the AlphaTrak test strips or other 
+brands of test strips and control solution with the AlphaTrak 3 meter can produce inaccurate results Warning: 
+  This system contains small parts that may be dangerous if swallowed 6 
+ 
+Caution: Read all the instructions provided in this user guide and practice the testing procedures before using the AlphaTrak 3 meter Blood glucose monitoring 
+should be done with the guidance of a veterinarian/veterinary surgeon Setting Up the AlphaTrak 3 Meter 
+ 
+The purpose of this section is to set the meter sound volume, time, date, units and Bluetooth connection With the meter off (no test strip inserted), press and hold m for 3 seconds until SET appears Press m to bypass setting the optional reminder alarms You may choose to set these later (see Setting 
+Reminder Alarms section) Set Sound Volume 
+ 
+Note: With the sound volume on, the meter will 
+beep when: 
+  The test strip is full of blood 
+  The test result appears on the display 
+  An error occurs 
+You may also choose to silence the meter 
+ 
+3 Set sound volume: 
+ 
+If you prefer: 
+Press c until you see 
+Then: 
+7 
+ 
+Low volume 
+Press m to save your preferred volume 
+setting 
+High volume 
+ 
+No sound 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8 
+ 
+Set Unit 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+Note: The glucose unit is preset to mg/dL Set unit: 
+  Press c to change the unit to mmol/L 
+  Press m to save your preferred unit 
+ 
+Set Date  
+ 
+The year will flash first Set year: 
+  Press m to accept year or 
+  Press c to change 
+  Press m to save 
+ 
+ 
+ 
+  
+Note: The date is preset to month-date format Set date format: 
+  Press c to change to date-month format 
+  Press m to save your preferred date format 
+9 
+ 
+The month will flash first Set month: 
+  Press c to display correct month 
+  Press m to save 
+ 
+8 Set day: 
+  Press c to display correct day 
+  Press m to save 
+ 
+ Set Time  
+ 
+Note: The meter can display either the 12-hour (1:24P) or the 24-hour 
+(13:24) time formats The time is preset to 12-hour format An  A  will 
+be displayed for AM and a  P  will be displayed for PM Set time format: 
+  Press c to change to 24-hour format 
+  Press m to save your preferred time format 
+ 
+10 Set hour: 
+  Press c to display correct hour 
+  Press m to save 
+10 
+ 
+ 
+ 
+11 Set minutes: 
+  Press c to display correct minutes 
+  Press m to save 
+12 Press and hold m for 3 seconds until meter turns off General meter set up is complete Set Bluetooth  
+ 
+Note: This Bluetooth setting is to set whether to automatically turn on 
+the Bluetooth function after the strip measurement is completed This 
+can help you to automatically capture your pet s Glucose readings in 
+your AlphaTrak 3 mobile Application The Bluetooth mode is preset to 
+ OFF Set Bluetooth mode: 
+  In the meter off state, press and hold the c button for more than 3 
+seconds to enter the Bluetooth and glucose warning setting mode 
+  Press c to turn ON the automatic Bluetooth mode 
+  Press m to save your preferred Bluetooth setting 
+ 
+ 
+ 
+11 
+ 
+Set Glucose Warning 
+ 
+Note: This Glucose warning setting can help you to easily evaluate 
+your pet s Glucose readings Hematocrit warning setting is default OFF Glucose warning setting will 
+apply for all species Set High Glucose Warning (Hyperglycemia): 
+  Press c to turn ON/OFF the High Glucose warning 
+  Press m to save your preferred setting 
+ 
+Note: The Hyperglycemia warning is default OFF and preset to 250 
+mg/dL (14.0 mmol/L) is 400 mg/dL (22.5 
+mmol/L) and min You can make changes in 
+steps of 10 mg/dL (0.5 mmol/L) Press c to display correct value 
+  Press m to save your preferred setting 
+ 
+ 
+ 
+Note: The Hypoglycemia warning is default ON and preset to 65 mg/dL 
+(3.6 mmol/L) is 95 mg/dL (5.4mmol/L) and 
+min You can make changes in steps of 5 
+mg/dL (0.2 mmol/L) Set Low Glucose Warning (Hypoglycemia): 
+12 
+ 
+ 
+ 
+  Press c to turn OFF/ON the Low Glucose warning 
+  Press m to save your preferred setting 
+ 
+  Press c to display correct value 
+  Press m to save your preferred setting 
+ 
+ 
+Note: Hematocrit warning is OFF by default Set Hematocrit warning: 
+  Press c to turn OFF/ON the Hct warning 
+  Press m to save your preferred setting 
+ 
+17 Press and hold m for 3 seconds until meter turns off Bluetooth and Glucose Warning set up is complete 13 
+ 
+Obtaining a Blood Sample 
+The purpose of this section is to obtain a capillary blood sample from your pet Caution: Animal blood is a potential source of zoonotic diseases We recommend wearing personal protective equipment when handling animal 
+blood Please note local occupational health and safety regulations How to Lance 
+  Use the AlphaTrak 3 lancet to obtain a blood sample from your pet Consult a veterinarian/veterinary surgeon for a recommended sampling method and instructions Select the test site: 
+There are many sites to obtain capillary blood samples: the marginal ear vein in both cats and 
+dogs; paw pad in cats and dogs; leg callus, usually dogs; inner or outer lip, dogs only Warming the area will help increase blood flow This can be done by: 
+  Gently rubbing the test site or 
+  Applying a warm (not hot) cloth to the test site If using a wet cloth, place the cloth inside a 
+plastic bag to avoid diluting the blood sample Wash your hands and the test site with warm water and soap to ensure accurate results Thoroughly dry your hands and test site Remove the round cover from the lancet and prick the test site Optional: a thin layer of petroleum jelly may be applied prior to lancing the site This can help the blood form into a droplet and avoid spilling into the hair The 
+AlphaTrak 3 lancing device may be used to assist in obtaining a blood sample For more 
+information on the lancing device follow the instructions included in your AlphaTrak 3 Starter Kit Gently apply pressure to the test site with sterile gauze or cotton wool to help stop 
+14 
+ 
+the blood flow If you accidentally prick yourself with a lancet, follow normal first aid procedures If bleeding 
+persists, contact your local healthcare professional AlphaTrak 3 Blood Glucose Testing 
+The purpose of this section is to produce an accurate blood glucose test result Perform a Blood Glucose Test 
+(Picture) 
+1 Check test strip expiry date Do not use expired test strips; they may produce inaccurate results IMPORTANT: Use only AlphaTrak 3 test strips Other test strips can produce inaccurate results The test strips are for single use only Important Test Strip Information 
+Please read the AlphaTrak 3 test strip package insert for more information Use the test strips within the meter s operating range: 40   104  F (4   40  C) Store test strips in a dry place between 36 - 90  F (2 - 32  C) Store test strips away from direct sunlight and heat Store test strips in their original vial only Clean and dry your hands before removing a strip from the vial Close the vial cap tightly immediately after removing a test strip Do not transfer test strips to another container Do not store test strips outside the vial Do not bend, cut or alter test strips Do not press the test strip against the test site Do not scrape the blood onto the test strip 15 
+ 
+  Do not apply blood to the flat side of the test strip Do not apply blood to the test strip when the test strip is out of the meter Do not put blood or foreign objects into the meter Warning: Drying agents in the test strip vial may be harmful if inhaled or swallowed and may irritate skin and eyes Remove test strip from vial Insert test strip to turn meter on Press m to turn meter on if it does not turn on upon insertion 
+of test strip If the meter does not turn on, go to Troubleshooting section Note: If you are using the AlphaTrak 3 meter for the first time, it will ask you to confirm the 
+species code (dog or cat) To do so, insert the Code Strip attached to the test strip vial Set Species (using Code Strip) 
+  Insert Code Strip  
+16 
+ 
+  Press c to display correct species (matching the code on the strip vial) 
+  Press m to save 
+ 
+ 
+ 
+6 Set Species  
+  After you have inserted the test strip again, you can change the species code on the meter: 
+  Press and hold m and at the same time press c to switch between the species codes 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 Obtain a blood drop 
+When the droplet and strip appear on the display, use the lancing device to obtain a blood drop See Obtaining a Blood Sample section of user guide Caution: Do not press c or m buttons when performing a test This may change the code and provide an inaccurate result or an Error Apply and hold blood to the sample area of the test strip until: 
+You hear a beep and a vertical line appears 
+the meter will start a countdown (3, 2, 1) 
+This indicates the test strip obtained enough blood and the meter is checking the glucose level If 
+a vertical line does not appear after 5 seconds, the sample may be too small 17 
+ 
+If the test does not start after applying blood drop, go to Troubleshooting section View result: 
+The result appears on the display when the test is complete Turn on Bluetooth: 
+Note: If your Bluetooth mode is set to turn on automatically, you will see a flashing Bluetooth 
+icon once the result is ready This indicates that Bluetooth is activated and ready to pair with 
+mobile the application If it is not set to turn on automatically, but you would like to transmit the result to your 
+AlphaTrak 3 Application press m and then c in 3 sec to turn on Bluetooth Note: Once meter and Application are paired correctly, the Bluetooth icon will stop flashing The 
+connection has been established Note: you will see 2 flashing arrows while the result is being transmitted Remove test strip to turn meter off 18 
+ 
+Discard used lancet and test strip properly Caution: Used lancets and test strips are considered bio-hazardous Professional users should collect and dispose lancets and test strips in a clinical waste container Consumers can collect them in any strong plastic or metal container with a tight cap or lid When the container is full, tightly secure the lid and 
+reinforce it with heavy-duty tape before disposing it as household waste Local regulations on disposal have to be followed Understanding Blood Glucose Results 
+The purpose of this section is to help you evaluate and interpret your pet s blood glucose results Always consult your Veterinarian regarding 
+appropriate ranges for your pet, if you have further questions regarding your pet s glucose results, or if your pet is not feeling well IMPORTANT: Low or high blood glucose readings can indicate a potentially serious medical condition Low and High Blood Glucose Results1,2 
+Result 
+What It Means 
+Clinical Signs 
+What To Do 
+Lower than 
+65 mg/dL 
+(3.6 mmol/L)* 
+for adult cats & 
+dogs 
+Low blood glucose 
+(Hypoglycemia) 
+Dogs and Cats 
+ 
+  Lethargy or abnormal 
+drowsiness 
+  Weakness 
+  Disorientation 
+  Visual disturbances 
+  Incoordination 
+  Tremors / shaky 
+movements 
+  Seizures 
+  Coma 
+ 
+Repeat the test with a new test strip if 
+the result is not consistent with the 
+clinical signs If the blood glucose result is not 
+consistent with the clinical signs, 
+perform a control solution test with a 
+new test strip If the test results are within the range 
+printed on the test strip vial, retest 
+using fresh blood and a new test strip If the blood glucose result is still not 
+consistent with the clinical signs, 
+contact a veterinarian/veterinary 
+surgeon 19 
+ 
+Higher than 
+250 mg/dL 
+(13.9 mmol/L) 
+for adult cats & 
+dogs2 
+High blood glucose 
+(Hyperglycemia) 
+Dogs and Cats 
+ 
+  
+Excessive thirst 
+  
+Frequent 
+  
+urination 
+  
+Weight loss 
+  
+Excessive appetite 
+  
+With chronically elevated 
+levels can see vomiting, 
+dehydration, depression, 
+acetone ( fruity ) breath, 
+coma Repeat the test with a new test strip if 
+the result is not consistent with the 
+clinical signs If the blood glucose result is not 
+consistent with the clinical signs, 
+perform a control solution test with a 
+new test strip If the test results are within the range 
+printed on the test strip vial, retest 
+using fresh blood and a new test strip If the blood glucose result is still not 
+consistent with the clinical signs, 
+contact a veterinarian/veterinary 
+surgeon IMPORTANT: Low or high blood glucose readings can indicate a potentially serious medical condition * Please always consult your Veterinarian regarding low and high blood glucose levels for your pet GLU-L Result Display (LOW) 
+Display 
+What It Means 
+What To Do 
+Appears when result is: 
+lower than 
+20 mg/dL or 
+1.1 mmol/L 
+Severe low blood glucose 
+(Hypoglycemia) 
+Follow a veterinarian/veterinary surgeon s advice to treat low blood 
+glucose If the blood glucose result does not match the clinical signs, perform a 
+control solution test to confirm that the meter and strips are working 
+properly 20 
+ 
+GLU-H Result Display (HIGH) 
+Display 
+What It Means 
+What To Do 
+Appears when result is: 
+higher than 
+750 mg/dL or 
+41.7 mmol/L 
+Severe high blood glucose 
+(Hyperglycemia) 
+HI reading with clinical signs, follow a veterinarian/veterinary 
+surgeon s treatment advice If the blood glucose result does not match the clinical signs, perform a 
+control solution test to confirm that the meter and strips are working 
+properly IMPORTANT: Low or high blood glucose readings can indicate a potentially serious medical condition AlphaTrak 3 Control Solution 
+AlphaTrak 3 control solution is a red liquid that contains a fixed amount of glucose The purpose of doing a control solution test is: 
+  To practice testing without using animal blood 
+  To confirm that the meter and test strips work together properly 
+  When you are unsure of the blood glucose test results 
+Control Solution Information 
+  Use only AlphaTrak 3 control solution with the AlphaTrak 3 meter Replace the cap securely on the bottle immediately after use Control solution results are accurate only between 59   104  F (15   40  C) Store Control solution at a dry place between 39 - 86  F (4 - 30  C) Do not add water or other liquid to control solution For information on how to obtain control solution, contact Zoetis Customer Care IMPORTANT: Control solution results should fall within the control solution range printed on the test strip vial or package insert Do not use this 
+range when testing blood glucose 21 
+ 
+CAUTION: Control solution range is not a range for the animal s blood glucose level Out of Range Control Solution Results 
+  Repeat the test if control solution results are outside the range printed on the test strip vial Repeat the test to confirm the results The correct test procedures may not have been followed Stop using the meter if control solution results are consistently outside the range printed on the test strip vial Contact Zoetis Customer Care Causes of out-of-range results include: 
+  Expired or bad control solution 
+  Expired or bad test strip 
+  Testing error 
+  Watered-down control solution 
+  Meter malfunction 
+  Test strip deterioration 
+  Control solution test done outside 59   104  F (15   40  C) 
+  Correct code is not set in the meter 
+ 
+Performing an AlphaTrak 3 Control Solution Test 
+(Picture) 
+1 Check control solution expiry date Discard 
+control solution 3 months after opening or on the expiry date printed 
+on the bottle whichever comes first (Example: open April 15, discard 
+July 15; write the discard date on the side of the bottle.) 
+ 
+ 
+2 Remove test strip from vial Insert test strip to turn meter on Press m to turn meter on if it does not turn on upon insertion 
+22 
+ 
+of test strip Note: The meter turns off after 2 minutes of inactivity Remove and reinsert the unused test strip 
+to restart the meter If the meter does not turn on go to Troubleshooting section Confirm System Check Screen: 
+  This display appears when you turn on the meter Do not use the meter if the display check 
+screen does not exactly match the example Contact Zoetis Customer Care See The AlphaTrak 3 Meter and How It Works section for more information If the system check screen does not appear, go to Troubleshooting section Code the meter to correct species: 
+  See section  AlphaTrak 3 Blood Glucose Testing  
+ 
+6 Start Control solution Testing: 
+  Press and hold c for 3 sec until you see the control solution bottle on the meter display 
+ 
+7 Apply Control Solution to the sample area of the test strip until: 
+  You hear a beep and a vertical line appears 
+  The meter will start a countdown (3, 2, 1) 
+This indicates the test strip obtained enough sample and the meter is checking the glucose level If 
+a vertical line does not appear after 5 seconds, the sample may be too small 23 
+ 
+If the test does not start after applying blood drop, go to Troubleshooting section Compare the control solution result to the range printed on the test strip vial or package insert The result should fall within the range Note: 
+The test results of Control Solution are related to species code When choosing different species, 
+the measured readings are different Remove the test strip to turn meter off 24 
+ 
+Using Meter Memory 
+The purpose of this section is to review your stored test results 
+ 
+1 Turn meter on by pressing the m button for less than 3 sec 
+ 
+ 
+ 
+ 
+2 View result history: 
+  Press m again for less than 3 sec 
+ 
+3 Press c to scroll to your oldest result  
+4 Press m to scroll to your latest results 
+ 
+ 
+ 
+ 
+Note: You will find your latest control reading at the end of your records 25 
+ 
+ 
+ 
+To transfer stored results to your AlphaTrak 3 Application, turn on Bluetooth mode: 
+5 Press m than c in 3 sec 
+ 
+Note: you will see 2 flashing arrows while the results are being transmitted 
+ 
+To exit meter memory at any time, press and hold m Setting Reminder Alarms  
+The purpose of this section is to set up to four reminder alarms to prompt you to test throughout the day Press and hold m for more than 3 sec to enter the system settings 
+ 
+ 
+ 
+2 Press c to select which alarm you would like to set (1, 2, 3 or 4) 
+3 Press m to save 
+ 
+ 
+4 Set hour: 
+  Press c to display correct hour 
+  Press m to save 
+5 Set minute: 
+  Press c to display correct minute 
+  Press m to save 
+27 
+ 
+ 
+ 
+6 Set sound: 
+  Press c to select your preferred sound setting for this alarm (low beep, louder beep, no sound) 
+  Press m to save 
+ 
+7 Press and hold m for 3 sec to turn off the meter Maintaining the AlphaTrak 3 Meter 
+Replacing the Battery 
+ 
+The meter comes with two CR 2032 3 V lithium batteries installed When 
+ appears on the display, the battery is low When this appears, the meter may fail to turn on When you are ready to install a new battery, remove the old battery and install the new battery 
+within 60 seconds to avoid losing time and date settings If time and date settings are lost, both time and date will flash until reset If the time and date 
+settings are lost, you may still perform an accurate blood glucose test Memory log and previously stored user settings, such as date and time format, are not affected by 
+removing the battery Slide the battery door to the right to open To remove the batteries, pull the plastic tab up to release the batteries Insert two new batteries: (+) facing up To close, slide the battery door in until it snaps into place Note: The battery in this product should be removed and disposed in accordance 
+with local regulations for separate collection of electronic waste and spent batteries 28 
+ 
+ 
+Cleaning the AlphaTrak 3 Meter 
+Avoid getting dirt, dust, blood, control solution or liquid in the meter test strip and data ports Clean the outside of the meter using a damp 
+cloth and: 
+  Mild detergent/soap and water, or 
+  70% isopropyl alcohol (available in the USA) 
+  A mixture of 1 part household bleach, 9 parts water 
+IMPORTANT: 
+Do not immerse the meter in water or other liquid Error Codes 
+Message 
+What It Means 
+What To Do 
+ 
+  The sample is too small 
+  There may be a problem with the test strip 
+  Meter error 
+ 
+  Use a new test strip and try again with 
+proper amount of sample 
+  Perform a control solution test using a 
+new test strip If the test results are within 
+the range printed on the test strip vial, 
+retest using blood and a new test strip If the control solution result is out of range 
+or the error reappears, contact Zoetis 
+Customer Care 29 
+ 
+ 
+  There may be a problem with the test strip 
+  Meter error 
+  1 Internal reference error (data memory) 
+  2 Firmware checksum error (program 
+memory) 
+  Perform a control solution test using a 
+new test strip If the test results are within 
+the range printed on the test strip vial, 
+retest using blood and a new test strip If the control solution result is out of range 
+or the error reappears, contact Zoetis 
+Customer Care Incorrect test procedure For example, 
+putting blood on the test strip before 
+meter waiting applied state 
+  There may be a problem with the test strip 
+  Meter error 
+  The test strip is affected with damp 
+  Wait for drop and strip to appear before 
+applying blood or control solution Perform a control solution test using a 
+new test strip If the test results are within 
+the range printed on the test strip vial, 
+retest using blood and a new test strip If the control solution result is out of range 
+or the error reappears, contact Zoetis  
+Customer Care There may be a problem 
+with the test strip 
+  Meter error 
+  Strip Sensing path broken 
+  Strip Type (OEM) error 
+  Perform a control solution test using a 
+new test strip If the test results are within 
+the range printed on the test strip vial, 
+retest using blood and a new test strip If the control solution result is out of range 
+or the error reappears, contact Zoetis 
+Customer Care There may be a problem 
+with the test strip connection with the meter 
+  Meter error 
+  Perform a control solution test using a 
+new test strip If the test results are within 
+the range printed on the test strip vial, 
+retest using blood and a new test strip If the control solution result is out of range 
+or the error reappears, contact Zoetis 
+Customer Care 30 
+ 
+ 
+ 
+  No calibration code 
+  Use the code strip attached to the test 
+strip s vial to set the species code 
+ 
+ 
+  Code Strip read failure 
+  Try to set the species code again If the code strip is illegible or broken, 
+please contact Zoetis Customer Care Operating temperature too low 
+  Try again after warming up the device Operating temperature too high 
+  Try again after cooling down the device 31 
+ 
+ 
+ 
+  The glucose test result is below the lower 
+limit Repeat the test If the result is still too 
+low, contact your Veterinarian for further 
+help The glucose test result is higher than the 
+upper limit 
+  Repeat the test If the result is still too 
+high, contact your Veterinarian for further 
+help Dead battery 
+  Replace battery Reset date and time, if 
+necessary If meter still does not enter test mode, 
+contact Zoetis Customer Care Bluetooth pairing failure 
+  The AlphaTrak 3 meter was not able to 
+connect to the AlphaTrak 3 mobile 
+Application 
+  Ensure Bluetooth is turned on your mobile 
+device and you have started the AlphaTrak 
+3 Application Press  Get results  on your 
+mobile application to establish the 
+connection If the error still occurs, contact Zoetis 
+Customer Care 32 
+ 
+Trouble Shooting 
+ 
+What It Means 
+What To Do 
+1 Test strip is inserted upside down, or 
+bottom end in, or not fully inserted into the 
+meter Insert test strip print side up, top end in No battery is installed 
+  Battery is installed incorrectly 
+  Install battery with (+) facing up Dead battery 
+  Replace battery Reset date and time, if 
+necessary If meter still does not enter test mode, 
+contact Zoetis Customer Care Defective test strip or meter 
+  Blood or foreign objects put in the test strip 
+port 
+ 
+  Contact Zoetis Customer Care The test does not start after applying the 
+blood drop Blood drop is too small 
+  Add blood to the same sample area within 
+  60 seconds, or repeat the test using a new 
+test strip and a larger blood drop Defective test strip 
+  Sample applied after meter turns off 
+  Repeat the test using a new test strip Wait for drop and strip to appear before 
+applying blood or control solution If problem persists, contact Zoetis 
+Customer Care Defective meter 
+ 
+  Contact Zoetis Customer Care 33 
+ 
+ 
+ 
+ 
+ 
+Specifications 
+Meter 
+Assay method 
+Electrochemistry 
+Calibration 
+Plasma equivalent 
+Automatic shutoff 
+2 minutes of inactivity 
+Hematocrit 
+15-65% 
+Measurement units 
+mg/dL or mmol/L 
+Storage temperature 
+  4 to 140  F (  20 to 60  C) 
+Relative humidity 
+Operation: 5% to 90% (non-condensing) 
+Storage: 5% to 95% (non-condensing) 
+Operating temperature 
+39 to 104  F (4 to 40  C)  
+Altitude 
+Operation: 71.7kPA (3048 m)  
+Storage: 54 kPA (5000 m) 
+Usage 
+For indoor use 
+Power source 
+Two CR 2032, 3V lithium battery, replaceable 
+Result range 
+45 mg/dL (2.4 mmol/L) to 400 mg/dL (22.5 mmol/L)  
+Sample 
+whole blood, capillary or venous 
+Sample size 
+0.3 microlitre (300 nanolitres) 
+Size 
+3.56 x 2.19" x 0.65  
+Weight 
+50 g (w/o battery) 
+Safety 
+IEC 61010-1:2010/AMD1:2016, IEC 61010-2-101:2018, ISO 15197:2015 
+34 
+ 
+EMC 
+FCC Part 15 B, IEC 60601-1-2:2014, IEC 61326-1:2012,  
+IEC 61326-2:2012, J55011 (H27):2015 
+Pollution 
+Degree 2 
+ 
+ 
+Test Strips 
+Storage temperature 
+36 to 90  F ( 2 to 32  C) 
+Storage relative humidity 
+0% to 90% (non-condensing) 
+Altitude 
+Storage: 54 kPA (5000 m) 
+Strip Open vial 
+12 months 
+ 
+Control Solution 
+Storage temperature 
+39 to 86  F ( 4 to 30  C) 
+Storage relative humidity 
+0% to 90% (non-condensing) 
+Altitude: 
+Storage: 54 kPA (5000 m) 
+ 
+ 
+ 
+35 
+ 
+Regulatory 
+USA 
+FCC Class B 
+This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to Part 15 of the FCC Rules These limits 
+are designed to provide reasonable protection against harmful interference in a residential installation This equipment generates, uses and can 
+radiate radio frequency energy and, if not installed and used in accordance with the instructions, may cause harmful interference to radio 
+communications However, there is no guarantee that interference will not occur in a particular installation If this equipment does cause harmful 
+interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to 
+correct the interference by one or more of the following measures: 
+-- 
+Reorient or relocate the receiving antenna -- 
+Increase the separation between the equipment and receiver -- 
+Connect the equipment into an outlet on a circuit different from that to which the receiver is connected -- 
+Consult the dealer or an experienced radio/TV technician for help FCC Class C 
+This device complies with part 15 of the FCC Rules Operation is subject to the following two conditions: (1) This device may not cause harmful 
+interference, and (2) this device must accept any interference received, including interference that may cause undesired operation FCC ID: 2A3FBALPHATRAK3 
+To assure continued FCC compliance: 
+Any changes or modifications not expressly approved by the grantee of this device could void the user's authority to operate the equipment 
+Exposure to Radio Frequency Radiation: 
+This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment This transmitter must not be co-located or 
+operating in conjunction with any other antenna or transmitter 36 
+ 
+Canada 
+IC warning: 
+This device complies with Industry Canada license-exempt RSS standard(s) Operation is subject to the following two conditions: (1) this device 
+may not cause interference, and (2) this device must accept any interference, including interference that may cause undesired operation of the 
+device Exposure to Radio Frequency Radiation: 
+This equipment complies with IC radiation exposure limits set forth for an uncontrolled environment This transmitter must not be co-located or 
+operating in conjunction with any other antenna or transmitter IC ID: 27797-ALPHATRAK3 
+ 
+37 
+ 
+Definition of Symbols 
+Symbol 
+Name / Description 
+ 
+Manufacturer of the device 
+ 
+Date of manufacturing in 
+Taiwan 
+ 
+Model Number 
+ 
+Serial number 
+ 
+Biological risks 
+Indicates that there are 
+potential biological risks 
+associated with the device 
+ 
+Consult instructions for use or 
+consult electronic instructions 
+for use 
+ 
+Indicates the need for the user 
+to consult the instructions for 
+use 
+38 
+ 
+ 
+ 
+Caution 
+ 
+Indicates that caution is 
+necessary when operating the 
+device in order to avoid 
+undesirable consequences 
+ 
+ References 
+1 BSAVA Manual of Canine and Feline Endocrinology, Third Edition, British Small Animal Veterinary Association Edited by Carmel Mooney and 
+Mark E Peterson Textbook of Veterinary Internal Medicine WB Saunders Company 1995 
+ 
+All trademarks are the property of Zoetis Services LLC or a related company or a licensor unless otherwise noted All Rights Reserved Zoetis Services LLC,  
+333 Portage Street,  
+Kalamazoo, MI 49007,  
+USA  
+ 
+For Zoetis Customer Care call 1-888-963-8471
