@@ -153,7 +153,7 @@ with chat_container:
             if msg_type == "image":
                 st.markdown(f'''
                     <div class="image-message">
-                        <img src="{content}" alt="Uploaded product image">
+                        <img src="{filepath}" alt="Uploaded product image">
                     </div>
                     <img src="https://api.dicebear.com/7.x/adventurer/svg?seed={i}" class="user-avatar">
                 ''', unsafe_allow_html=True)

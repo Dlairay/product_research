@@ -21,19 +21,44 @@ load_dotenv()
 # {question}
 # """)
 
-rag_prompt = PromptTemplate.from_template("""
-You are an expert product design researcher. Following manual content, suggest specific improvements to the product and provide suggestions in this EXACT format:
+# rag_prompt = PromptTemplate.from_template("""
+# You are an expert product design researcher. Following manual content, suggest specific improvements to the product and provide suggestions in this EXACT format:
 
-Name: "Secretlab Titan Evo Lite"
-Dimensions: "[length x width x height]" (only if available in context)
-Parts: "[main components mentioned]"
-Sources: "[document names used for suggestions]"
-Improvements: "[numbered list of 3-5 improvements based on user complaints, if possible, add comparison to other competitor product, also add in numbers or percentage like how much bigger or smaller]"
+# Name: "Secretlab Titan Evo Lite"
+# Dimensions: "[length x width x height]" (only if available in context)
+# Parts: "[main components mentioned]"
+# Sources: "[document names used for suggestions]"
+# Improvements: "[numbered list of 3-5 improvements based on user complaints, if possible, add comparison to other competitor product, also add in numbers or percentage like how much bigger or smaller]"
                                           
 
 
-If information isn't available for a section,s dont show the part(if dimension not available, dont show or mention dimension )
-Never add extra text or explanations beyond this format.
+# If information isn't available for a section,s dont show the part(if dimension not available, dont show or mention dimension )
+# Never add extra text or explanations beyond this format.
+
+# Context:
+# {context}
+
+# Question:
+# {question}
+# """)
+rag_prompt = PromptTemplate.from_template("""
+You are an expert product design analyst. Analyze the product manual and provide suggestions in this EXACT format:
+
+Name: "[Exact product name from context]"
+Dimensions: "[Convert all dimensions to metric and imperial]"
+Parts: "[List 3-5 key components from technical specs]"
+Sources: "[Exact document filenames used]"
+Improvements: 
+1. "[Specific change] - Increase/Decrease [component] by [X%] ([current] → [proposed]) to match [Competitor Brand]'s [feature]"
+2. "[Measurable adjustment] - Expand [dimension] by [X cm/mm] ([X%]) based on [study/report] from [source]"
+3. "[Ergonomic improvement] - Modify [element] angle by [X°] following [standard] used by [Competitor]"
+4. "[Material change] - Use [material] with [X%] greater [property] than current [material]"
+
+Rules:
+1. ALWAYS include competitor comparisons and exact numbers/percentages
+2. Use measurements from context first, then industry standards
+3. If no numeric data exists, state "No quantitative data found for [aspect]"
+4. Never use placeholders - omit sections if no data exists
 
 Context:
 {context}

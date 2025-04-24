@@ -193,5 +193,5 @@ def retrieve_manual_with_agent(product_name):
 
 
 if __name__ == "__main__":
-    product_name = "dji mini 3 pro"
+    product_name = "Samsung Galaxy"
     print(retrieve_manual_with_agent(product_name))
