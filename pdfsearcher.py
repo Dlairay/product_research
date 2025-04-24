@@ -193,5 +193,5 @@ def retrieve_manual_with_agent(product_name):
 
 
 if __name__ == "__main__":
-    product_name = "Samsung Galaxy"
+    product_name = "Secretlab Titan Evo Lite"
     print(retrieve_manual_with_agent(product_name))
