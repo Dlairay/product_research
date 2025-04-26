@@ -45,10 +45,9 @@ def run_suggestions(product: str):
     qa_chain = get_retrieval_qa(product)
 
     question = (
-        "How can this product be improved based on the top user complaints? suggest specific changes to particular components or features with sizes,numbers,material change recommendations,etc using the manual content."
+        f"How can this {product} be improved based on the top user complaints?only product specific suggestions, no general suggestions"
     )
 
     response = qa_chain.invoke({"query": question})
-    print(f"Retrieved documents: {response['source_documents']}")  # Print source documents
     print(f"\n🧠 Suggestions:\n{response['result']}\n")
     return response["result"]

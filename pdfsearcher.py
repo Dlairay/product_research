@@ -179,7 +179,7 @@ def extract_txt_path(agent_response):
         return None
 
 def retrieve_manual_with_agent(product_name):
-    instruction = f"Find and process the user manual for '{product_name}'. Ensure the manual contains detailed schematics and dimensions. If unable to find from product name, try dropping the specific model number. Return the path to the saved text file."
+    instruction = f"Find and process the user manual for '{product_name}'. Ensure the manual contains detailed schematics and dimensions. If unable to find from product name, try dropping the specific model number. Return the path to the saved text file.do not make up reasoning"
     result = agent.run(instruction)
     print("Agent's raw response:", result)  # Print the raw response for debugging
     txt_path = extract_txt_path(result)
@@ -193,5 +193,5 @@ def retrieve_manual_with_agent(product_name):
 
 
 if __name__ == "__main__":
-    product_name = "dji mini 3 pro"
+    product_name = "secretlab titan evo 2022"
     print(retrieve_manual_with_agent(product_name))

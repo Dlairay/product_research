@@ -11,7 +11,7 @@ product = product_scan(image)
 print("✅ Product detected:", product)
 
 # === Step 2: Get competitors ===
-# competitor_list = get_competitor_list(product,n=0)
+competitor_list = get_competitor_list(product,n=0)
 
 competitor_list = []
 
@@ -32,4 +32,4 @@ combined_labelled_dfs = load_and_combine_existing_dataframes(list_to_research)
 processed_data = process_data(combined_labelled_dfs)
 print("✅ Processed data:", processed_data)
 # === Step 5: Run suggestions (after all products are processed)
-run_suggestions(product)
+run_suggestions("Secretlab TITAN Evo 2022")
